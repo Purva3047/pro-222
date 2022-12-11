@@ -17,6 +17,9 @@ const transporter = nodemailer.createTransport({
 
 app.post("/send-mail", (req, res) => {
     const to = req.body.to;
+    const name = req.body.name;
+    const amount = req.body.amount;
+    const date = req.body.date;
     const mailData = {
         from: "",
         to: to,
